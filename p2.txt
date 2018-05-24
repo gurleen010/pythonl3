@@ -1,0 +1,115 @@
+
+#Q.1- Take 20 integer inputs from user and print the following:
+#(Use the basic logic of loops) 
+
+#1. number of positive numbers
+#2. number of negetive numbers
+#3. number of odd numbers
+#4. number of even numbers
+#5. number of 0s
+
+l1=[]
+p,n,o,e,z=0,0,0,0,0
+
+for num in range(0,20):
+    num=int(input("Enter the value"))
+    l.append(num)
+for nos in l:
+    if nos>0:
+        p=p+1
+    else:
+        n=n+1
+    if no%2==0:
+        e=e+1
+    else:
+        o=o+1
+    if no==0:
+        z=z+1
+print("Number of positive integers=%d\nNumber of negative integers=%d" 
+%(p,n))
+print("Number of even numbers=%d\nNumber of even numbers=%d" %(e,o))
+print("Number of zeros=",z)
+
+
+# Q.2-Find largest and smallest elements of a tuples.
+>>> t=(5,3,2,1,100,54)
+>>> print(max(t))
+100
+>>> print(min(t))
+1
+
+#Q.3- Write a program to find the product of all elements of a tuple. 
+product=1
+l=[]
+num=int(input("Enter the number of elements of tuple"))
+for i in range(num):
+    n=int(input("Enter the value"))
+    l.append(n)
+t=tuple(l)
+for i in t:
+    product=product*i
+print(product)
+
+#Q.4- Create two set using user defined values.
+
+#1. Calculate difference between two sets.
+#2. Compare two sets.
+#3. Print the result of intersection of two sets.
+
+s1=set()
+s2=set()
+num1=int(input("Enter the number of elements in first set"))
+for i in range(num1):
+    n=int(input("Enter " +str(i+1)+ "value"))
+    s1.add(n)
+num2=int(input("Enter the number of elements in second set"))
+for i in range(num2):
+    n=int(input("Enter " +str(i+1)+ "value"))
+    s2.add(n)
+print("Difference of sets=",s1-s2)
+print("Set comparison=", s1^s2)
+print("Intersection=",s1&s2)
+
+
+#Q.6- Create a dictionary to store name and marks of 10 students by 
+user 
+input.
+
+d={}
+n=int(input("Enter the number pof elements to be added in the 
+dictionary"))
+for i in range(n):
+    num=input("Enter name and marks as name:marks of " +str(i+1)+ " 
+student")
+    l=num.split(':')
+    d[l[0]]=l[1]
+print(d)
+
+#Q.7-Sort the dictionary created in previous question according to 
+marks. 
+
+dict={}
+ 
+for j in range(10):
+
+    n=input("Enter name and marks as name:marks of student" 
++str(j+1)+":")
+
+    li=n.split(':')
+
+    dict[li[0]]=li[1]
+
+print(dict)
+print(sorted(dict.values()))
+
+#Q.8- Count the number of occurrence of each letter in word 
+"MISSISSIPPI". Store count of every letter with the letter in a 
+dictionary.
+s="MISSISSIPPI"
+d={}
+l=list(s)
+p=[]
+for i in l:
+    p1=l.count(i)
+    d[i]=p1
+print(d)
